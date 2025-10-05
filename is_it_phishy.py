@@ -52,11 +52,11 @@ if __name__ == "__main__":
     if not res_whois.get("ok"):
             err_log.append(res_whois.get("error"))
     else :
-        print(f"Risks detecting from the domain lookup : {res_whois.get("risk_flags")} "if res_whois.get("risk_flags") else "No risk  detected in the domain lookup")
+        print(f"Risks detected from the domain lookup : {res_whois.get("risk_flags")} "if res_whois.get("risk_flags") else "No risk  detected in the domain lookup")
     if not res_ssl.get("ok"):
             err_log.append(res_ssl.get("error"))
     else :
-        print(f"Risks detecting from the domain lookup : {res_ssl.get("risk_flags")} "if res_ssl.get("risk_flags") else "No risk  detected in the domain lookup")
+        print(f"Risks detected from the SSL/TLS lookup : {res_ssl.get("risk_flags")} "if res_ssl.get("risk_flags") else "No risk  detected in the domain lookup")
     
     if err_log:
          for i in err_log:
